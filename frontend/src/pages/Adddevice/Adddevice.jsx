@@ -4,8 +4,6 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import axios from 'axios';
 function Adddevice({ onClose, refreshDevices }) {
 
-
-
     const [formData, setFormData] = useState({
         Devicename: '',
         Category: '',
@@ -229,76 +227,3 @@ function Adddevice({ onClose, refreshDevices }) {
 
 export default Adddevice;
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-
-
- <div className="flex flex-col space-y-1">
-                            <label className='capitalize font-medium'>Contact</label>
-                            <input
-                                type="text"
-                                name="Contact"
-                                value={formData.Contact}
-                                onChange={handleChange}
-                                className="shadow-sm border-2 rounded-md w-full px-3 py-2"
-                                placeholder="Contact number"
-                                required
-                            />
-                        </div>
-
-                        <div className="flex flex-col space-y-1">
-                            <label className='capitalize font-medium'>Email</label>
-                            <input
-                                type="email"
-                                name="Email"
-                                value={formData.Email}
-                                onChange={handleChange}
-                                className="shadow-sm border-2 rounded-md w-full px-3 py-2"
-                                placeholder="Email address"
-                                required
-                            />
-                        </div>
-
-                        <div className="space-y-1 flex flex-col">
-                            <label className='capitalize font-medium'>Address</label>
-                            <input
-                                type="text"
-                                name="Address"
-                                value={formData.Address}
-                                onChange={handleChange}
-                                className="shadow-sm border-2 rounded-md w-full px-3 py-2"
-                                placeholder="Vendor address"
-                                required
-                            />
-                        </div>
-
-                        <div className="space-y-1 flex flex-col">
-                            <label className='capitalize font-medium'>GST</label>
-                            <input
-                                type="text"
-                                name="GST"
-                                value={formData.GST}
-                                onChange={handleChange}
-                                className="shadow-sm border-2 rounded-md w-full px-3 py-2"
-                                placeholder="GST number"
-                                required
-                            />
-                        </div>
-
-
-
-
-
-*/

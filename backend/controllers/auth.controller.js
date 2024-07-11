@@ -16,22 +16,12 @@ export const login = async (req, res) => {
       return res.status(400).json({ error: "Invalid emailId or password" })
     }
 
-
-
-
-
     // // Generate JWT
     const token = jwt.sign(
       { _id: user._id },
       "abcd",
       { expiresIn: "1h" }
     );
-
-
-
-
-
-
 
     // const token = genrateTokenAndSetCookie(emailId, res);
     res.status(200).json({ message: "Login Successfully", token });
@@ -42,8 +32,6 @@ export const login = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" })
   }
 }
-
-
 
 export const logout = (req, res) => {
   try {
@@ -89,3 +77,9 @@ export const changepassword = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+
+
+
+
+

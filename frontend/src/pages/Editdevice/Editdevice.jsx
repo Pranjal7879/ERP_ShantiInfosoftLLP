@@ -1,18 +1,18 @@
-import React, { useState, } from 'react'
+import React, { useState } from 'react';
 import Dialog from '@mui/material/Dialog';
 import CloseIcon from '@mui/icons-material/Close';
 
-
-function Editdevice({ open, onClose, }) {
-
-
-    const [name, setName] = useState('')
-    const [category, setCategory] = useState('')
+function Editdevice({ open, onClose }) {
+    const [name, setName] = useState('');
+    const [category, setCategory] = useState('');
     const [status, setStatus] = useState('');
     const [purchaseDate, setPurchaseDate] = useState('');
     const [warrantyDate, setWarrantyDate] = useState('');
+    const [receiverName, setReceiverName] = useState('');
 
-
+    const handleClose = () => {
+        onClose();
+    };
 
     return (
         <>
@@ -21,13 +21,10 @@ function Editdevice({ open, onClose, }) {
                 onClose={handleClose}
                 aria-describedby="alert-dialog-slide-description"
             >
-
-                {/* <div className='flex justify-center items-center h-screen bg-gray-100'> */}
                 <div className="w-full sm:w-96 bg-white shadow-md rounded-md p-6">
                     <div className='justify-between flex '>
                         <h1 className="text-2xl font-bold mb-4">Edit Device</h1>
                         <CloseIcon onClick={handleClose} className='cursor-pointer ml-auto' />
-
                     </div>
 
                     <div className="mb-4">
@@ -46,7 +43,7 @@ function Editdevice({ open, onClose, }) {
                             Category
                         </label>
                         <select
-
+                            id="category"
                             className="shadow-sm border-2 rounded-md w-full px-3 py-2 "
                             value={category}
                             onChange={(e) => setCategory(e.target.value)}
@@ -57,18 +54,8 @@ function Editdevice({ open, onClose, }) {
                             <option value="MacBook">MacBook</option>
                             <option value="EliteBook">EliteBook</option>
                             <option value="Desktop">Desktop</option>
-
                         </select>
                     </div>
-                    {/* <div className="mb-4">
-            <label className="block mb-2 text-sm font-medium" htmlFor="image">
-                Change Image
-            </label>
-            
-        </div> */}
-
-
-
 
                     <div className="mb-4">
                         <label className=" mb-2  text-sm font-medium" htmlFor="status">
@@ -82,19 +69,17 @@ function Editdevice({ open, onClose, }) {
                         />
                     </div>
 
-
                     <div className="mb-4">
-                        <label className="text-sm mb-2 font-medium" htmlFor="name">
+                        <label className="text-sm mb-2 font-medium" htmlFor="receiverName">
                             Receiver Name
                         </label>
                         <input
-                            id=" receiver name"
+                            id="receiverName"
                             className="shadow-sm border-2  rounded-md w-full px-3 py-2 "
-                            value={name}
+                            value={receiverName}
                             onChange={(e) => setReceiverName(e.target.value)}
                         />
                     </div>
-
 
                     <div className="mb-4">
                         <label className=" mb-2  text-sm font-medium" htmlFor="purchaseDate">
@@ -122,28 +107,13 @@ function Editdevice({ open, onClose, }) {
                         />
                     </div>
 
-
-                    {/* <div>
-      <h2>Upload Image</h2>
-      <input type="file" accept="image/*" onChange={handleImageChange} />
-      {selectedImage && (
-        <div>
-          <h3>Preview:</h3>
-          <img src={selectedImage} alt="Selected" 
-           className="max-w-full max-h-36 mt-2"/>
-        </div>
-      )}
-    </div> */}
-
                     <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded w-full mt-2">
-                        update
+                        Update
                     </button>
                 </div>
-                {/* </div> */}
             </Dialog>
         </>
-    )
+    );
 }
-
 
 export default Editdevice;

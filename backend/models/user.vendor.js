@@ -15,7 +15,7 @@ const vendorSchema = new mongoose.Schema({
   emailId: {
     type: String,
     required: true,
-    unique: true,
+    // unique: true,
     match: [/.+@.+\..+/, "Please enter a valid email address"]
   },
   address: {
@@ -26,7 +26,7 @@ const vendorSchema = new mongoose.Schema({
   GST: {
     type: String,
     required: true,
-    unique: true
+    // unique: true
   }
 
 });

@@ -91,7 +91,7 @@ function Addemployee({ open, onClose, refreshEmployees }) {
 
             <button
               type="submit"
-              className="bg-blue-500 text-white px-4 py-2 w-full rounded-md hover:bg-blue-700  "
+              className="rounded mt-4 w-full h-10 bg-[#2e2159] uppercase text-white text-xl font-semibold  "
             >
               Save
             </button>

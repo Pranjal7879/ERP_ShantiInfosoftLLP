@@ -30,6 +30,7 @@ function Assigndevice({ open, onClose, deviceId, updateDevice }) {
               Authorization: `Bearer ${localStorage.getItem('token')}`
             }});
 
+            
           setEmployees(response.data);
           
           console.log("employees",response.data)
